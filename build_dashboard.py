@@ -202,6 +202,10 @@ def main():
     out = os.path.join(HERE, "dashboard.html")
     open(out, "w", encoding="utf-8").write(template.replace("/*DATA*/null", payload))
     print(f"{out}  ({os.path.getsize(out) // 1024} KB)")
+    pages = os.path.join(HERE, "docs")
+    if os.path.isdir(pages):              # GitHub Pages copy; publishes on the next push
+        open(os.path.join(pages, "index.html"), "w", encoding="utf-8").write(template.replace("/*DATA*/null", payload))
+        print("  also wrote docs/index.html for GitHub Pages")
     for c in data["campaigns"]:
         print(f"  {c['label']:<12} {c['window'] or '':<4} {len(c['sheets']) - 1:>3} weeks  "
               f"Total from {c['totalSource']}  ${sum(r[3] for r in c['sheets'][0]['rows']):,.0f}")

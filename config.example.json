@@ -1,0 +1,9 @@
+{
+  "report_key": "YOUR_APPLOVIN_REPORT_KEY",
+  "campaigns": {
+    "IAP": {"id": "<32-char campaign id>", "highlight": 2000},
+    "BLD iOS": {"id": "<32-char campaign id>"},
+    "BLD Android": {"id": "<32-char campaign id>"},
+    "ADS": {"id": "<32-char campaign id>"}
+  }
+}

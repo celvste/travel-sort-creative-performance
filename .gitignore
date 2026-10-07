@@ -1,0 +1,15 @@
+# secrets
+config.json
+.env
+
+# data: spend figures stay local
+weeks/
+totals/
+workbooks/
+dashboard.html
+master_data_add_*.csv
+*.xlsx
+*.csv
+
+.DS_Store
+__pycache__/
